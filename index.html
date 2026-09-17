@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantum Doge (QDOGE) — Orbiting Base</title>
+<meta name="description" content="Quantum Doge (QDOGE) is a community meme token orbiting the Base network.">
+<link rel="icon" href="assets/quantum-doge-logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a href="#top" class="brand">
+      <img src="assets/quantum-doge-logo.jpg" alt="Quantum Doge logo" class="brand-mark">
+      <span class="brand-name">Quantum Doge</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#about">About</a>
+      <a href="#orbit">Chart &amp; contract</a>
+      <a href="#buy">How to buy</a>
+      <a href="#community">Community</a>
+    </nav>
+
+    <a class="btn btn-primary header-cta" href="https://dexscreener.com/base/0x1e25b353536a5c2cd1194b6f2c3c45c3e7400e73d25304823731dd93867d5db6" target="_blank" rel="noopener">Trade QDOGE</a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="orbit-rings" aria-hidden="true">
+      <div class="ring ring-a"></div>
+      <div class="ring ring-b"></div>
+      <div class="ring ring-c"></div>
+      <div class="orbit-dot dot-a"></div>
+      <div class="orbit-dot dot-b"></div>
+    </div>
+
+    <div class="wrap hero-inner">
+      <img src="assets/quantum-doge-logo.jpg" alt="Quantum Doge astronaut mascot" class="hero-logo">
+      <h1 class="hero-title">A doge, a helmet,<br>and the whole chain to explore.</h1>
+      <p class="hero-sub">Quantum Doge (QDOGE) is a community-run meme token launched on Base. No roadmap promises, no utility theater — just an astronaut shiba orbiting the mempool with everyone else.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://dexscreener.com/base/0x1e25b353536a5c2cd1194b6f2c3c45c3e7400e73d25304823731dd93867d5db6" target="_blank" rel="noopener">View live chart</a>
+        <a class="btn btn-ghost" href="#buy">How to buy</a>
+      </div>
+
+      <div class="ticker-row">
+        <span class="ticker-pill">QDOGE / BSTONK</span>
+        <span class="ticker-pill">Network: Base</span>
+        <span class="ticker-pill">DEX: Uniswap</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <h2>Why an astronaut doge?</h2>
+        <p>Every cycle needs a mascot willing to go further than the last one. Quantum Doge took the classic shiba, zipped it into a pressure suit, and sent it looking for alpha in the space between blocks — orbiting Base the way electrons orbit a nucleus.</p>
+        <p>There's no team token unlock schedule to memorize and no whitepaper pretending to be a research paper. It's a meme, it lives on-chain, and its only job is to be recognizable in a sea of copycats.</p>
+      </div>
+      <div class="about-facts">
+        <div class="fact">
+          <span class="fact-label">Chain</span>
+          <span class="fact-value">Base</span>
+        </div>
+        <div class="fact">
+          <span class="fact-label">Category</span>
+          <span class="fact-value">Community meme token</span>
+        </div>
+        <div class="fact">
+          <span class="fact-label">Liquidity</span>
+          <span class="fact-value">Locked in a public Uniswap pool</span>
+        </div>
+        <div class="fact">
+          <span class="fact-label">Team allocation</span>
+          <span class="fact-value">None promised — check the chart yourself</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORBIT / CONTRACT -->
+  <section id="orbit" class="section orbit-section">
+    <div class="wrap">
+      <h2>Verify before you orbit</h2>
+      <p class="section-lede">Contract addresses get copied and faked constantly. Always cross-check against the official links below before you swap anything.</p>
+
+      <div class="address-card">
+        <div class="address-row">
+          <span class="address-label">QDOGE token</span>
+          <code id="token-address">0x0531B596C21B3aC983A1CcE35A5FaD3637103222</code>
+          <button class="copy-btn" data-copy-target="token-address">Copy</button>
+        </div>
+        <div class="address-row">
+          <span class="address-label">Liquidity pair</span>
+          <code id="pair-address">0x1e25b353536a5c2cd1194b6f2c3c45c3e7400e73d25304823731dd93867d5db6</code>
+          <button class="copy-btn" data-copy-target="pair-address">Copy</button>
+        </div>
+      </div>
+
+      <p class="live-note">Price, liquidity and holder counts change by the minute on a young pool — rather than print numbers here that go stale, check them live on Dexscreener.</p>
+      <a class="btn btn-ghost" href="https://dexscreener.com/base/0x1e25b353536a5c2cd1194b6f2c3c45c3e7400e73d25304823731dd93867d5db6" target="_blank" rel="noopener">Open live chart</a>
+    </div>
+  </section>
+
+  <!-- HOW TO BUY -->
+  <section id="buy" class="section buy-section">
+    <div class="wrap">
+      <h2>How to buy QDOGE</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-index">1</span>
+          <div>
+            <h3>Get a Base wallet</h3>
+            <p>Install a wallet like Coinbase Wallet or MetaMask and switch its network to Base.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-index">2</span>
+          <div>
+            <h3>Fund it with ETH on Base</h3>
+            <p>Bridge or buy ETH directly on the Base network — you'll need a small amount for gas plus whatever you're swapping.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-index">3</span>
+          <div>
+            <h3>Swap on Uniswap</h3>
+            <p>Paste the verified QDOGE contract address into Uniswap, double-check the pair matches the one above, and confirm your swap.</p>
+          </div>
+        </li>
+      </ol>
+      <a class="btn btn-primary" href="https://app.uniswap.org/swap?outputCurrency=0x0531B596C21B3aC983A1CcE35A5FaD3637103222&chain=base" target="_blank" rel="noopener">Open Uniswap</a>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community" class="section community-section">
+    <div class="wrap community-grid">
+      <div>
+        <h2>Join the orbit</h2>
+        <p>The chart moves fast. The community is where the actual conversation happens.</p>
+      </div>
+      <div class="community-links">
+        <a class="community-card" href="https://x.com/Lujuuslaskentak" target="_blank" rel="noopener">
+          <span class="community-card-label">X (Twitter)</span>
+          <span class="community-card-sub">Announcements &amp; memes</span>
+        </a>
+        <a class="community-card" href="https://t.me/qdogesol" target="_blank" rel="noopener">
+          <span class="community-card-label">Telegram</span>
+          <span class="community-card-sub">Live community chat</span>
+        </a>
+        <a class="community-card" href="https://dexscreener.com/base/0x1e25b353536a5c2cd1194b6f2c3c45c3e7400e73d25304823731dd93867d5db6" target="_blank" rel="noopener">
+          <span class="community-card-label">Dexscreener</span>
+          <span class="community-card-sub">Live chart &amp; transactions</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <img src="assets/quantum-doge-logo.jpg" alt="Quantum Doge logo" class="footer-mark">
+      <span>Quantum Doge</span>
+    </div>
+    <p class="disclaimer">QDOGE is a meme token with no intrinsic value or guaranteed returns. This site is not financial advice. Liquidity is thin and prices are volatile — verify contract addresses yourself and only risk what you can afford to lose.</p>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
